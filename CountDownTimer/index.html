@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CountDownTimer</h1>
+   
+   <!--Timer container -->
+    <div class="timer-container">
+        <!--SVG Progress Circle-->
+         <svg id="progressSvg"  width="340" height="340" viewBox="0 0 120 120" style="display:none;">
+      <circle class="bg"  r="54" cx="60" cy="60" r="54"/>
+      <circle class="progress" cx="60" cy="60" r="54"/>
+    </svg>
+
+
+        <div class="time-wrapper">
+         <input type="number" id="hoursInput" value="00" min="0" max="23" maxlength="2">
+      <span class="colon">:</span>
+        <input type="number" id="minutesInput" value="00" min="0" max="59" maxlength="2">
+        <span class="colon">:</span>
+        <input type="number" id="secondsInput" value="00" min="0" max="59" maxlength="2">
+        </div>    
+    </div>
+
+    <br>
+    <button id="startBtn">Start</button>
+    <button id="pauseBtn" disabled>Pause</button>
+    <button id="resumeBtn" disabled>Resume</button>
+    <button id="resetBtn" disabled>Reset</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
