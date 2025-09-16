@@ -1,0 +1,112 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(59, 34, 34);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Quiz box styling */
+.quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgb(158, 96, 96);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(16, 16, 17, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Question styling */
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Counter below the question */
+
+
+/* Answer buttons container */
+.answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Answer button base style */
+.answer-buttons button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color:rgb(182, 150, 150);
+    border-radius: 5px;
+    transition: background 0.3s,transform 0.1s;
+}
+
+/* Hover effect */
+.answer-buttons button:hover:not(:disabled) {
+    background-color: rgb(235, 128, 128);
+    transform: scale(1.02);
+}
+
+/* correct & wrong colors */
+.correct {
+    background-color: rgb(138, 213, 138) !important;/* green */
+    color: black;
+}
+.wrong {
+    background-color:rgb(206, 37, 37)!important;
+    color: black;
+}
+
+/* Next & Submit buttons */
+#next, #submit , #restart{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(224, 176, 176)  ;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Disabled button */
+#next:disabled, #submit:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Hover effect for active buttons */
+#next:hover:not(:disabled), 
+#submit:hover:not(:disabled),
+#restart:hover {
+    background-color:rgb(226, 38, 38);
+}
+
+/* Result box styling */
+#result {
+    max-width: 600px;
+    margin: 50px auto;
+    background:indianred;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 30px;
+    text-align: center;
+}
+
+#result h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#feedback{
+    font-size: 1.3rem ;
+    font-weight: bold;
+    margin-top: 20px;
+}
