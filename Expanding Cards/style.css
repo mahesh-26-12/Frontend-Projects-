@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: #111;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    max-width: 1200px;
+    transition: all 0.5s ease;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 20px;
+    color:#fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(239, 234, 234, 0.4);
+    transition: all 0.7s ease-in-out;
+    overflow: hidden;
+}
+
+.panel:hover{
+    transform: scale(1.03);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease ;
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.overlay p {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active .overlay {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+@media (max-width:480px){
+    .container {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .panel {
+        flex: unset;
+        height: 20vh;
+        margin: 5px;
+    }
+    .panel.active{
+        height: 50vh;
+    }
+}
