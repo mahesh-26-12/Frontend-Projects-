@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* Reset default margins and padding */
+* {
+    box-sizing: border-box;
+}
+
+/* Basic body setup */
+body {
+     font-family: 'Lato', sans-serif;
+     background-color: #333;
+     color: #222;
+     overflow-x: hidden;
+     margin: 0;
+}
+
+/* Container for all  rotating elements */
+.container {
+    background-color: rosybrown;
+    transform-origin: top left;  /* point of rotation */
+    transition: transform 0.6s ease-in-out;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+/* When show-nav is active, rotate the container */
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+
+/* Circle container to position the circle */
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+/* The circular red area */
+.circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+    box-shadow: 0 0 25px rgba(255,121,121,0.5);
+}
+
+/* Rotate the circle when nav is open */
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
+/*common button styles */
+.circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    
+    font-size: 28px;
+    color: #fff;
+    /* transform: translate(-50%,-50%); */
+}
+
+
+/*Remove blue focus outline*/
+.circle button:focus {
+ outline: none;
+}
+
+/* Position of hamburger icon */
+.circle button#open {
+    left: 60%;
+}
+
+
+/* Position of close (x) icon */
+.circle button#close {
+    top: 60%;
+    transform:   rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+
+
+    transition-delay: 0.3s;
+}
+
+
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+   
+
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
+    font-weight: 600;
+}
+
+
+
+
+ nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #ff7979;
+    transition: 0.3s;
+    
+ }
+
+ nav ul li:hover i {
+  text-shadow: 0 0 10px #ff7979;
+}
+ nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+ }
+
+ nav ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+ }
+
+ nav a{
+    color: #fafafa;
+    text-decoration: none;
+    transition: all 0.5s;
+ }
+
+ nav a:hover {
+    color: #FF7979;
+    font-weight: bold;
+ }
+
+nav ul li a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+
+ nav ul li a:hover {
+    color: #ff7979;
+ }
+
+
+ .content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+ }
+
+ .content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+ }
+
+ .content h1 {
+    margin: 0;
+    color: #222;
+ }
+
+ .content small {
+    color: #555;
+    font-style: italic;
+ }
+
+ .content p {
+    color: #333;
+    line-height: 1.6;
+ }
+
+ /* Back to Top button */
+ #backToTop {
+    background: #ff7979;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    transition: background 0.3s;
+ }
+
+ #backToTop:hover {
+    background: #e85a5a;
+ }
+

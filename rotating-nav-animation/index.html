@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Rotating Navigation - The Future of Web Development</title>
+  </head>
+  <body>
+    <!-- Container that holds everything-->
+    <div class="container">
+      <!-- Circular menu background-->
+      <div class="circle-container">
+        <div class="circle">
+          <!--close (x) button-->
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
+          <!-- open (hamburger) button-->
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <!-- Main content that rotates along with the circle-->
+      <div class="content">
+        <h1>The Future of Web Development</h1>
+        <small>By Mahesh Pudari</small>
+
+        <img
+          src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+          alt="Futuristic Web Development"
+          style="max-width: 100%; margin: 20px 0; border-radius: 10px"
+        />
+
+        <p>
+          Web development has evolved tremendously in the past decade, and it
+          continues to change at a rapid pace. From simple static websites to
+          interactive web apps, the journey has been incredible. Looking ahead,
+          several trends are shaping the future of how we build and experience
+          the web.
+        </p>
+
+        <h3>1. Progressive Web Apps (PWAs)</h3>
+        <p>
+          PWAs combine the best of web and mobile applications. They are fast,
+          reliable, and can work offline. Many big companies like Twitter and
+          Starbucks already use PWAs to provide users with app-like experiences
+          directly in the browser.
+        </p>
+
+        <h3>2. Artificial Intelligence and Machine Learning</h3>
+        <p>
+          AI is no longer just a buzzword. From chatbots that provide customer
+          support to AI-driven recommendations on e-commerce sites, web
+          developers are integrating machine learning into web experiences. In
+          the future, we can expect even more personalization and automation
+          powered by AI.
+        </p>
+
+        <h3>3. Voice Search and Conversational UI</h3>
+        <p>
+          With the rise of smart assistants like Alexa, Siri, and Google
+          Assistant, websites will need to adapt to voice search. Developers
+          will build interfaces that understand natural language and provide
+          information conversationally.
+        </p>
+
+        <h3>4. WebAssembly</h3>
+        <p>
+          WebAssembly allows code written in languages like C, C++, and Rust to
+          run inside the browser at near-native speed. This opens the door for
+          high-performance applications such as gaming, 3D modeling, and video
+          editing directly on the web.
+        </p>
+
+        <h3>5. Cybersecurity and Privacy</h3>
+        <p>
+          As more users rely on web platforms for banking, shopping, and
+          communication, the need for secure and private web experiences is
+          stronger than ever. Future development will put greater emphasis on
+          data protection and ethical coding.
+        </p>
+
+        <h3>6. The Role of AR and VR</h3>
+        <p>
+          Augmented Reality (AR) and Virtual Reality (VR) are entering the web
+          space. From virtual showrooms to immersive training platforms, AR and
+          VR will create entirely new ways for users to interact online.
+        </p>
+
+        <h3>Final Thoughts</h3>
+        <p>
+          The future of web development promises to be exciting, challenging,
+          and full of opportunities. Developers who embrace new technologies,
+          stay adaptable, and focus on user experience will lead the way in
+          building the web of tomorrow.
+        </p>
+
+        <button id="backToTop"><i class="fas fa-arrow-up"></i> Back to Top</button>
+      </div>
+    </div>
+
+    <!-- Navigation links (hidden until toggled)-->
+    <nav>
+      <ul>
+        <li><i class="fas fa-home"></i><a href="#">Home</a></li>
+        <li><i class="fas fa-user-alt"></i><a href="#">About</a></li>
+        <li><i class="fas fa-envelope"></i><a href="#">Contract</a></li>
+      </ul>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>
