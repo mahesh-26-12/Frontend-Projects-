@@ -82,7 +82,7 @@ input:focus {
     width: 40px;
 }
 
-/*Show clear button when typin*/
+/*Show clear button when typing*/
 .search.has-text .clear-btn {
     opacity:1;
     pointer-events: all;
