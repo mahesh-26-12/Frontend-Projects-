@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg {
+    background: url(https://images.unsplash.com/photo-1601625463687-25541fb72f62?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170) no-repeat center center/cover;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px);
+
+}
+
+.loading-text {
+    font-size: 50px;
+    color: #fff;
+}
+
+.loading-message {
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+
+    /* added for smooth hide/show */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* hidden state used by JS to smoothly hide the message */
+.loading-message.hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 30%;
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #fff;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.change-bg {
+    position: fixed;
+    bottom: 80px;
+   
+  
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid #fff;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+
+}
+
+.change-bg:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.change-bg:active {
+    transform: translateY(0);
+}
