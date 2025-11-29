@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: slateblue;
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    /* flex-direction: column; */
+    /* overflow: hidden; */
+}
+
+
+/* Login container */
+.container {
+    background-color: rgba(0,0,0,0.4);
+    padding: 25px 40px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+}
+
+h1{
+    /* text-align: center; */
+    margin-bottom: 30px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: lightcyan;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    /* display: inline-block;
+    font-family: inherit; */
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Links */
+.text {
+    margin-top: 25px;
+}
+
+ a {
+     color: lightblue;
+    text-decoration: none;
+}
+
+
+/* Form control */
+.form-control {
+    position: relative;
+    margin: 20px 0 35px;
+    text-align: left;
+}
+
+
+/*  Input field */
+.form-control input {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    /* display: block;
+    position: relative;
+    z-index: 100; */
+}
+
+
+
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: none;
+    border-bottom-color: lightskyblue ;
+}
+
+/* Label structered into animated spans */
+.form-control label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    pointer-events: none;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+
+/* Each character of label */
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    /* transition: 0.3s cubic-bezier(0.68, -0.55,0.265,1.55); */
+    transition: 0.3s ease;
+}
+
+/* Floating effect on focus or valid input */
+.form-control input:focus ~ label span,
+.form-control input:valid ~ label span {
+    color: lightskyblue;
+    transform: translateY(-30px);
+}
+
+/* Show/Hide Password Button */
+.toggle {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+}
