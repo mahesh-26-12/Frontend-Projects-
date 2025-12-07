@@ -1,0 +1,160 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+/* Reset box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Page base styling */
+body {
+    background-color: linear-gradient(135deg, rgb(161, 100, 223), rgb(98, 71, 185));
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Allow content to grow vertically on small screens */
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+
+    flex-wrap: wrap;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Main centered card-like container */
+.container {
+    background-color: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(6px);
+}
+
+/* Main title */
+.title {
+    
+    margin: 0 0 0.5rem;
+    font-weight: 400;
+}
+
+/* Subtitle / description text */
+.subtitle {
+  
+    margin: 0 0 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Container for control buttons + volume slider */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Volume control section */
+.volume-control {
+    display: flex;
+    align-items: center;    
+    gap: 0.5rem;
+    background-color: rgba(0,0,0,0.15);
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+}
+
+.volume-control label{
+    font-size: 0.85rem;
+}
+
+/* Volume slider styling */
+.volume-control input[type='range'] {
+    width: 120px;
+}
+
+/* Wrapper for sound buttons */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Main button style */
+.btn{
+    background-color: rgb(182, 136, 228);
+    border-radius: 5px;
+    border: none;
+    margin: 0.5rem;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease,box-shadow 0.15s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Secondary button style (Stop , Random Sound) */
+.btn.secondary{
+    
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.btn:focus {
+    outline: none;
+}
+/* Button pressed effect */
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Responsive tweaks ---------- */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px){
+    .container {
+        padding: 1.25rem;
+    }
+
+    .btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* For small mobile screens */
+@media (max-width: 480px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    /* make buttons full width on mobile for easier tapping */
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .volume-control {
+        width: 100%;
+        justify-content: center;
+    }
+
+     .volume-control input[type='range'] {
+    width: 70%;
+  }
+}

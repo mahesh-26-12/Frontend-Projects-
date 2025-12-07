@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sound Board</title>
+</head>
+<body>
+    <!-- All sounds are preloaded here and controlled using Javascript -->
+    <audio id="applause" src="sounds/applause.mp3"></audio>
+    <audio id="boo" src="sounds/boo.mp3"></audio>
+    <audio id="gasp" src="sounds/gasp.mp3"></audio>
+    <audio id="tada" src="sounds/tada.mp3"></audio>
+    <audio id="victory"  src="sounds/victory.mp3"></audio>
+    <audio id="wrong" src="sounds/wrong.mp3"></audio>
+
+    <!-- Main container to center and control layout -->
+       <div class="container">
+    <h1 class="title">Sound Board</h1>
+    <p class="subtitle">
+        Tap a button to play a sound. Use the controls to stop or adjust the volume.
+    </p>
+
+    <!-- global controls -->
+     <div class="controls">
+        <!-- Button to stop sound -->
+         <button id="stop" class="btn secondary">Stop</button>
+         <!-- Button to play a random sound -->
+          <button id="randomSound" class="btn secondary">Random Sound</button>
+     
+
+     <!-- Volume slider to control all sounds -->
+      <div class="volume-control">
+        <label for="volume">Volume</label>
+        <input type="range"
+        id="volume"
+        min="0"
+        max="1"
+        step="0.01"
+        value="1">
+      </div>
+      </div>
+
+      <!-- Buttons for individual sounds will be added here using JS -->
+       <div id="buttons" class="buttons"></div>
+    </div>
+
+         <!-- Script at the end so DOM is loaded before JS runs -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
