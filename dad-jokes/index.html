@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the layout adapt to mobile screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dad jokes</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Don't Laugh Challenge</h3>
+
+        <!-- This is where the joke text will be inserted by Javascript -->
+        <div id="joke"  class="joke">//Joke goes here</div>
+
+        <!-- Button group so we can style buttons together -->
+        <div class="buttons">
+            <!-- Button to get  a new joke -->
+            <button id="jokeBtn" class="btn primary" >Get Another Joke</button>
+
+            <!-- New feature: button to copy current joke  -->
+            <button id="copyBtn" class="btn secondary">Copy Joke</button>
+        </div>
+
+        <!-- Small status message area for copy success/error -->
+        <p id="copyMsg" class="copy-msg" aria-live="polite"></p>
+    </div>
+
+    <!-- Link to the Javascript file -->
+    <script src="script.js"></script>
+</body>
+</html>
