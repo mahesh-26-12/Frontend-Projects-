@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Event KeyCodes</title>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Event KeyCodes</h1>
+            <p class="subtitle">Press any key to see <code>event.key</code>,<code>event.keyCode</code>,and <code>event.code</code></p>
+        </header>
+
+        <section id="display" class="display">
+            <div class="key placeholder">Press any key to get the keyCode</div>
+        </section>
+
+        <!-- Feature: key history panel -->
+        <aside class="history-panel">
+            <div class="history-header">
+                <h2>Key History</h2>
+                <div class="history-controls">
+                    <button id="clearHistory" title="Clear history">Clear</button>
+                    <button id="copyHistory" title="Copy history">Copy</button>
+                </div>
+            </div>
+            <ul id="historyList" class="history-list" aria-live="polite"></ul>
+    </aside>
+
+    <footer class="footer">
+        <small>Tip: Hold Shift / Ctrl / Alt while  pressing a key to see modifiers.</small>
+    </footer>
+    </main>
+   
+    <script src="script.js"></script>
+</body>
+</html>
